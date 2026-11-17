@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Samjhana 🌻</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #180c36, #39205e, #743c73);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#ffd76a 1px, transparent 1px);
+    background-size: 70px 70px, 110px 110px;
+    animation: sparkle 5s linear infinite;
+    opacity: .5;
+}
+
+@keyframes sparkle {
+    from {background-position: 0 0, 0 0;}
+    to {background-position: 70px 70px, -110px 110px;}
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+.sunflower {
+    font-size: 55px;
+    animation: rotate 8s linear infinite;
+    display: inline-block;
+}
+
+@keyframes rotate {
+    to {transform: rotate(360deg);}
+}
+
+h1 {
+    font-size: clamp(34px, 7vw, 65px);
+    color: #ffdf77;
+    text-shadow: 0 0 20px #ffae42;
+    margin: 18px 0;
+}
+
+.subtitle {
+    font-size: 19px;
+    color: #ffe8f5;
+    letter-spacing: 2px;
+}
+
+.card {
+    margin: 35px auto;
+    padding: 30px;
+    border: 1px solid #ffffff55;
+    border-radius: 25px;
+    background: #ffffff13;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px #0005;
+}
+
+.hero-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffdc77;
+    box-shadow: 0 0 30px #ffc857;
+    margin: 20px;
+}
+
+.message {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #fff1f7;
+}
+
+.highlight {
+    color: #ffdc77;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ffbc58, #ff76a5);
+    color: #341440;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #ff9c9c55;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.song {
+    color: #ffe8a5;
+    font-size: 17px;
+    line-height: 2;
+    font-style: italic;
+}
+
+.dora {
+    font-size: 75px;
+    margin: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+}
+
+.footer {
+    padding: 25px;
+    color: #ffd9ed;
+}
+
+.floating {
+    position: fixed;
+    bottom: -50px;
+    animation: floatUp linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: scale(.8);}
+    to {opacity: 1; transform: scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+    <div class="sunflower">🌻</div>
+
+    <p class="subtitle">A SPECIAL DAY FOR A SPECIAL FRIEND</p>
+
+    <h1>Happy Birthday!</h1>
+
+    <h2 style="color:#fff;font-size:30px;">
+        Samjhana Chotadon 💖
+    </h2>
+
+    <!-- Add your friend's picture -->
+    <img src="samjhana.jpg"
+         alt="Samjhana"
+         class="hero-image"
+         onerror="this.style.display='none'">
+
+    <div class="card">
+
+        <h2 style="color:#ffdc77;margin-bottom:20px;">
+            🌷 A Little Birthday Message 🌷
+        </h2>
+
+        <p class="message">
+            Dear <span class="highlight">Samjhana</span>,<br><br>
+
+            Today is not just another day.
+            It is the day the world became a little
+            more beautiful because you were born. 💗
+
+            May your smile always shine brighter
+            than the stars, your dreams grow bigger
+            than the sky, and your heart always find
+            reasons to be happy.
+
+            Thank you for being such a wonderful
+            friend. Life is more beautiful with
+            genuine people like you around.
+
+            Never stop smiling, never stop dreaming,
+            and never forget how special you are!
+
+            <br><br>
+            <span class="highlight">
+            Wishing you endless happiness,
+            success, love and unforgettable memories!
+            </span>
+
+            <br><br>
+            With lots of love and best wishes,
+            <br>
+            Your Friend ❤️
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2 style="color:#ffdc77;">🎤 A Birthday Song for You 🎶</h2>
+
+        <p class="song" id="lyrics">
+            🎵 Happy birthday, dear Samjhana,<br>
+            Shine like sunshine, beautiful flower!<br>
+            May your dreams all come true,<br>
+            Sending happiness and love to you!<br><br>
+
+            🌻 Smile today and every day,<br>
+            Let your worries fly away!<br>
+            Keep on shining, keep on glowing,<br>
+            A beautiful journey is waiting! 🎵
+        </p>
+
+        <button onclick="singSong()">🎤 Sing Birthday Song</button>
+        <button onclick="stopSong()">⏹ Stop Singing</button>
+
+    </div>
+
+    <div class="card">
+
+        <h2 style="color:#ffdc77;">💙 Your Little Cartoon Surprise</h2>
+
+        <div class="dora">💙🎀🌻</div>
+
+        <p class="message">
+            Sending you a little cartoon magic,
+            unlimited smiles and a pocket full of happiness!
+        </p>
+
+        <p style="font-size:40px;margin:15px;">
+            🐱💙 🎂 🎈
+        </p>
+
+        <p class="highlight">
+            A friend like you is a gift worth celebrating!
+        </p>
+
+    </div>
+
+<div class="photo-section">
+    <h2>📸 A Beautiful Memory</h2>
+
+    <div class="photo-frame">
+        <img
+            src="memory4.jpg.JPG"
+            alt="A beautiful friendship memory"
+        >
+    </div>
+
+    <p class="photo-caption">
+        Some memories become timeless,
+        and some friendships become priceless. 💖
+    </p>
+
+    <h3>Forever Special, Chhota Don! 😎💙</h3>
+</div>
+
+
+    <button onclick="surprise()">🎁 Open Your Birthday Surprise</button>
+
+    <div id="surprise" class="card hidden">
+        <h2 style="color:#ffdc77;">🌻 You Are Special! 🌻</h2>
+        <p class="message">
+            May every sunrise bring you hope,
+            every sunset bring you peace,
+            and every moment bring you happiness.
+
+            <br><br>
+            Happy Birthday once again, Samjhana! 💖
+        </p>
+        <div style="font-size:55px;">🎂💐💝</div>
+    </div>
+
+    <div class="card">
+        <h3>🎵 Birthday Music</h3>
+        <p style="margin:12px;">
+            Press play to enjoy your birthday celebration.
+        </p>
+
+        <audio id="music" loop>
+            <source src="birthday.mp3" type="audio/mpeg">
+        </audio>
+
+        <button onclick="toggleMusic()">🎶 Play / Pause Music</button>
+    </div>
+
+</div>
+
+<div class="footer">
+    Made with ❤️, friendship and lots of sunflowers 🌻
+    <br>
+    A little celebration for Samjhana
+</div>
+
+<script>
+
+// Floating birthday decorations
+const decorations = ["🌻","💖","✨","🌸","🎈","💐"];
+
+function createDecoration() {
+    const item = document.createElement("div");
+    item.className = "floating";
+    item.innerHTML =
+        decorations[Math.floor(Math.random()*decorations.length)];
+
+    item.style.left = Math.random()*100 + "vw";
+    item.style.fontSize = (18 + Math.random()*25) + "px";
+    item.style.animationDuration = (5 + Math.random()*7) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 12000);
+}
+
+setInterval(createDecoration, 450);
+
+// Birthday surprise
+function surprise() {
+    document.getElementById("surprise")
+        .classList.remove("hidden");
+
+    for(let i=0; i<30; i++) {
+        setTimeout(createDecoration, i*80);
+    }
+}
+
+// Background music
+function toggleMusic() {
+    const music = document.getElementById("music");
+
+    if(music.paused) {
+        music.play().catch(() =>
+            alert("Please add birthday.mp3 to your folder first.")
+        );
+    } else {
+        music.pause();
+    }
+}
+
+// Original singing-style birthday lyrics
+const lines = [
+"Happy birthday, dear Samjhana!",
+"Shine like sunshine, beautiful flower!",
+"May your dreams all come true!",
+"Sending happiness and love to you!",
+"Smile today and every day!",
+"Let your worries fly away!",
+"Keep on shining, keep on glowing!",
+"A beautiful journey is waiting!"
+];
+
+let songIndex = 0;
+let singing = false;
+
+function singSong() {
+    stopSong();
+    singing = true;
+    songIndex = 0;
+    singNext();
+}
+
+function singNext() {
+    if(!singing || songIndex >= lines.length) return;
+
+    const utterance = new SpeechSynthesisUtterance(
+        lines[songIndex]
+    );
+
+    utterance.rate = 0.85;
+    utterance.pitch = 1.3;
+    utterance.lang = "en-US";
+
+    utterance.onend = () => {
+        songIndex++;
+        setTimeout(singNext, 400);
+    };
+
+    speechSynthesis.speak(utterance);
+}
+
+function stopSong() {
+    singing = false;
+    speechSynthesis.cancel();
+}
+
+</script>
+
+</body>
+</html>
